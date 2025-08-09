@@ -45,18 +45,3 @@ Built with FastAPI, it accepts natural language data analysis requests and retur
 git clone https://github.com/Ananthavalli1991/Data_Analyzer_Agent.git
 cd Data_Analyzer_Agent
 
-2.  Create and activate a virtual environment:
-
-python3 -m venv venv
-source venv/bin/activate   # On Windows use: venv\Scripts\activate
-
-3.  Install dependencies:
-
-pip install -r requirements.txt
-
-4.  Create a .env file and add your Gemini API key
-
-5. Running Locally
-
- uvicorn main:app --reload
-
