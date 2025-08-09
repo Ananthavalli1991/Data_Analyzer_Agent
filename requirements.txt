@@ -1,5 +1,6 @@
 setuptools>=65.5.1
 wheel>=0.38.4
+pip>=23.1
 fastapi==0.95.2
 uvicorn==0.22.0
 pydantic==1.10.12
@@ -9,9 +10,10 @@ requests==2.31.0
 beautifulsoup4==4.12.2
 aiofiles==23.1.0
 python-multipart==0.0.6
-genai==2.1.0
+genai==1.1.0
 python-dotenv==1.0.0
 numpy==1.25.2
 Pillow==10.0.0
+
 
 
