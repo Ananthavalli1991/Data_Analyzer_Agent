@@ -1,14 +1,18 @@
+# This file is named render.yaml and is used by Render to configure your web service.
+# It should be placed in the root of your Git repository.
+
+# The services array can contain multiple services (e.g., a web server and a database).
 services:
   - type: web
-    name: Data-Analyzer-Agent
+    name: Data_Analyzer_Agent
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    region: singapore # You can change this to a region closer to your users.
+    plan: free # Change to "starter" or "pro" for more resources.
+    # The build command is updated to first install setuptools and wheel.
+    buildCommand: "pip install setuptools wheel && pip install -r requirements.txt"
+    # The start command runs your FastAPI application using Uvicorn.
+    startCommand: "uvicorn main:app --host 0.0.0.0 --port $PORT"
+    # Port to listen on. $PORT is a variable provided by Render.
     envVars:
-      - key: GEMINI_API_KEY
-        fromDatabase: true
-    plan: free
-    region:  oregon
-    autoDeploy: true
-
-
+      - key: PORT
+        value: "8000"
