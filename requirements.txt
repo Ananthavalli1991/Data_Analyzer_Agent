@@ -1,23 +1,13 @@
-# Build essentials
 setuptools>=65.0.0
 wheel
 cython
-
-# Web framework
 fastapi
 uvicorn
-
-# Web scraping
+python-multipart
 requests
 beautifulsoup4
 html5lib
-
-# Data handling
 pandas
 numpy
-
-# Plotting
 matplotlib
-
-# Environment variables
 python-dotenv
