@@ -8,6 +8,7 @@ services:
       - key: GEMINI_API_KEY
         fromDatabase: true
     plan: free
-    region: Singapore (Southeast Asia)
+    region:  oregon
     autoDeploy: true
+
 
