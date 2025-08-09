@@ -4,12 +4,12 @@
 # The services array can contain multiple services (e.g., a web server and a database).
 services:
   - type: web
-    name: Data_Analyzer_Agent
+    name: Data-Analyzer-Agent
     env: python
     region: singapore # You can change this to a region closer to your users.
     plan: free # Change to "starter" or "pro" for more resources.
-    # The build command is updated to first install setuptools and wheel.
-    buildCommand: "pip install setuptools wheel && pip install -r requirements.txt"
+    # The build command is updated to use a single, consolidated pip install command.
+    buildCommand: "pip install --upgrade pip setuptools wheel -r requirements.txt"
     # The start command runs your FastAPI application using Uvicorn.
     startCommand: "uvicorn main:app --host 0.0.0.0 --port $PORT"
     # Port to listen on. $PORT is a variable provided by Render.
