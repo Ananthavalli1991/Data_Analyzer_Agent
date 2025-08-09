@@ -1,11 +1,10 @@
 services:
   - type: web
-    name: Data-Analyzer-Agent
+    name: "Data-Analyzer-Agent"
     env: python
-    pythonVersion: "3.11.5"
+    pythonVersion: "3.10.12"
     region: singapore
     plan: free
-    buildCommand: |
-      pip install --upgrade pip setuptools wheel
-      pip install -r requirements.txt
-    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    buildCommand: "pip install --upgrade pip setuptools wheel && pip install -r requirements.txt"
+    startCommand: "uvicorn main:app --host 0.0.0.0 --port $PORT"
+
