@@ -1,0 +1,13 @@
+fastapi==0.95.2
+uvicorn==0.22.0
+pydantic==1.10.12
+pandas==2.0.3
+matplotlib==3.7.1
+requests==2.31.0
+beautifulsoup4==4.12.2
+aiofiles==23.1.0
+python-multipart==0.0.6
+genai==0.2.2
+python-dotenv==1.0.0
+numpy==1.25.2
+Pillow==10.0.0
